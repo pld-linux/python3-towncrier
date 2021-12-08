@@ -2,7 +2,7 @@
 Summary:	Building newsfiles for your project
 Name:		python3-%{module}
 Version:	21.3.0
-Release:	0.1
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/t/towncrier/%{module}-%{version}.tar.gz
