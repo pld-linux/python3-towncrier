@@ -1,0 +1,26 @@
+--- towncrier-21.9.0/setup.py.orig	2022-02-10 19:30:21.000000000 +0100
++++ towncrier-21.9.0/setup.py	2022-03-23 19:27:32.610680698 +0100
+@@ -47,8 +47,7 @@ setup(
+         "incremental",
+         "jinja2",
+         "setuptools",
+-        "toml; python_version < '3.6'",
+-        "tomli; python_version >= '3.6'",
++        "toml"
+     ],
+     extras_require={"dev": ["packaging"]},
+     package_dir={"": "src"},
+--- towncrier-21.9.0/src/towncrier/_settings.py.orig	2022-02-10 19:30:21.000000000 +0100
++++ towncrier-21.9.0/src/towncrier/_settings.py	2022-03-23 19:27:46.083941041 +0100
+@@ -6,9 +6,9 @@ import os
+ import sys
+ import pkg_resources
+ 
+-if sys.version_info >= (3, 6):
++try:
+     import tomli
+-else:
++except ImportError:
+     tomli = None
+     import toml
+ 
