@@ -7,7 +7,7 @@ Summary:	Building newsfiles for your project
 Summary(pl.UTF-8):	Tworzenie plików z nowościami dla własnego projektu
 Name:		python3-%{module}
 Version:	21.9.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/towncrier/
