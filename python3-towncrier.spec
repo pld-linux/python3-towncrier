@@ -61,7 +61,7 @@ Dokumentacja API modułu Pythona %{module}.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 %{__sed} -i -e 's/^import mock/from unittest import mock/' src/towncrier/test/test_create.py
 
